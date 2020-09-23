@@ -1,0 +1,68 @@
+Attribute VB_Name = "modConsts"
+'*******************************************************'
+'* Program:       myHMS Database Engine                *'
+'*******************************************************'
+'* Author:        Heriberto Mantilla Santamaría        *'
+'*******************************************************'
+'* Build DataBase using Plan Text File.                *'
+'*                                                     *'
+'* Based on Jim's original code [CodeId=60559] allows  *'
+'* to create a Database using plane files, you can     *'
+'* create:                                             *'
+'*                                                     *'
+'* 1. Several tables.                                  *'
+'* 2. Can put create an username and password for the  *'
+'*    database.                                        *'
+'* 3. Add fields in any table specifically.            *'
+'* 4. Select certain fields in a table.                *'
+'*                                                     *'
+'======================================================*'
+'* In development:                                     *'
+'*                                                     *'
+'* 1. To put to carry out searches.                    *'
+'* 2. To upgrade a chart according to parameters.      *'
+'* 3. To compress the generated files.                 *'
+'*-----------------------------------------------------*'
+'* CREDITS AND THANKS                                  *'
+'*-----------------------------------------------------*'
+'*           Build DataBase In Text File               *'
+'*             Jim Jose [CodeId=60559]                 *'
+'======================================================*'
+'*      Binary File Password Encryptor class!!!        *'
+'*              Cahaltech [CodeId=36457]               *'
+'*-----------------------------------------------------*'
+'* Dedicated to                                        *'
+'*-----------------------------------------------------*'
+'* Ivan T.P (halo sahabatku apa kabar)                 *'
+'* mibi (saya mencintai kamu)                          *'
+'* sakura_tsukino (my little sister)                   *'
+'* Gaby (my best girl friend)                          *'
+'* Pancho funes                                        *'
+'*******************************************************'
+'*                   Version 1.0.0                     *'
+'*******************************************************'
+'*                                                     *'
+'* Note:     Comments, suggestions, doubts or bug      *'
+'*           reports are wellcome to these e-mail      *'
+'*           addresses:                                *'
+'*                                                     *'
+'*                  heri_05-hms@mixmail.com or         *'
+'*                  hcammus@hotmail.com                *'
+'*                                                     *'
+'*        Please rate my work on this control.         *'
+'*    That lives the Soccer and the América of Cali    *'
+'*             Of Colombia for the world.              *'
+'*******************************************************'
+'*        All rights Reserved © HACKPRO TM 2006        *'
+'*******************************************************'
+Option Explicit
+
+Public Const CommentToken  As String = "-- "
+Public Const BFinalToken   As String = CommentToken & _
+    "------------------------------------------------------"
+Public Const CommentSchema As String = CommentToken & vbCrLf & "-- Create schema "
+
+Public TableNames()        As String  ' All the Table names.
+
+Public LendPos             As Long    ' The end pos of the string inbetween searchword1 and searchword2.
+Public LStartPos           As Long    ' The start pos of the string inbetween searchword1 and searchword2.
